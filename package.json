@@ -9,7 +9,7 @@
     "dev": "node scripts/dev.mjs",
     "dev:web": "vite --host 127.0.0.1 --port 4173",
     "build": "vite build",
-    "dist:win": "npm run build && electron-builder --win nsis",
+    "dist:win": "npm run build && electron-builder --win nsis --publish never",
     "start": "electron .",
     "preview": "vite preview --host 127.0.0.1 --port 4174"
   },
@@ -39,7 +39,6 @@
       "package.json"
     ],
     "asar": true,
-    "publish": "never",
     "win": {
       "target": [
         "nsis"
